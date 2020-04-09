@@ -1,0 +1,22 @@
+#Inicializo las imagenes y el Coordenadas
+imagen=['im1','im2','im3']
+Coordenadas={}
+
+for i in imagen:
+    #Ingreso las coordenadas y las asigno en una tupla
+    print('Ingrese un valor para la coordenada x')
+    x = int(input ())
+    print('Ingrese un valor para la coordenada y')
+    y= int(input ())
+    tupla=(x,y)
+    #verifico que no que no hayan coordenadas repetidas;
+    while tupla in Coordenadas.values():
+        print('las coordenadas ingresadas ya existen.Ingrese coordenadas distintas ' )
+        print('Ingrese un valor para la  coordenada x')
+        x  = int(input ())
+        print('Ingrese un valor para la coordenada y')
+        y= int(input ())
+        tupla=(x,y )   
+    Coordenadas[i]=(x,y)
+#Imprimo las Coordenadas
+print('Diccionario ',Coordenadas)
